@@ -24,7 +24,24 @@
     background-color: #ffc233;
 }
 
-
+.showcase {
+    margin-top: 100px;
+    max-width: 95%;
+}
+.showcase-card {
+    padding: 15px;
+}
+.showcase-row {
+    margin-top: 40px;
+}
+@media (min-width: 768px) {
+    .showcase {
+        margin-top: 300px;
+    }
+    .showcase-card {
+        padding: 50px 100px
+    }
+}
 
 .aligner, .below {
     display: flex;
