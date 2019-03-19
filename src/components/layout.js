@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import instagram from "./../images/instagram.svg" // Tell Webpack this JS file uses this image
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -35,12 +36,19 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
         </div>
+        <footer className="call-to-action d-flex flex-column">
+            <div className="aligner">
+                <h2>Ready to chat?</h2>
+                <p>Send us a message</p>
+                <a href="contact.html">
+                    <button className="devshop-button" type="submit">Get a quote</button>
+                </a>
+                <div className="below">
+                    <a href="#somthing"><img src={instagram} style={{width: '20px', height: '20px'}} /></a>
+                </div>
+            </div>
+        </footer>
       </>
     )}
   />
