@@ -2,8 +2,33 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import logo from "./../images/logo.svg"
+
 const Header = ({ siteTitle }) => (
-  <header
+    <nav className="devshop-nav navbar static-top">
+        <div className="container">
+            <a className="navbar-brand" href="#">
+                <img src={logo} style={{ width: '30px', height: '30px' }} />
+            </a>
+            <a className="navbar-text" href="#">Work</a>
+            <a className="navbar-text" href="#">Services</a>
+            <a className="btn btn-light color-primary rounded-pill" href="#">Get quote</a>
+        </div>
+    </nav>
+)
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+}
+
+Header.defaultProps = {
+  siteTitle: ``,
+}
+
+export default Header
+
+/*
+* {/*<header
     style={{
       background: `rebeccapurple`,
       marginBottom: `1.45rem`,
@@ -28,15 +53,4 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+  </header>*/
