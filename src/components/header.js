@@ -7,12 +7,12 @@ import logo from "./../images/logo.svg"
 const Header = ({ siteTitle }) => (
     <nav className="devshop-nav navbar static-top">
         <div className="container">
-            <a className="navbar-brand" href="#">
-                <img src={logo} style={{ width: '30px', height: '30px' }} />
-            </a>
-            <a className="navbar-text" href="#">Work</a>
-            <a className="navbar-text" href="#">Services</a>
-            <a className="btn btn-light color-primary rounded-pill" href="#">Get quote</a>
+          <Link to="/" className="navbar-brand">
+            <img src={logo} style={{ width: '30px', height: '30px' }} />
+          </Link>
+            {/*<a className="navbar-text" href="#">Work</a>*/}
+            {/*<a className="navbar-text" href="#">Services</a>*/}
+            {/*<a className="btn btn-light color-primary rounded-pill" href="#">Get quote</a>*/}
         </div>
     </nav>
 )

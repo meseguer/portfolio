@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -41,11 +41,11 @@ const Layout = ({ children }) => (
             <div className="aligner">
                 <h2>Ready to chat?</h2>
                 <p>Send us a message</p>
-                <a href="contact.html">
+                <Link to="/contact" className="navbar-brand">
                     <button className="devshop-button" type="submit">Get a quote</button>
-                </a>
+                </Link>
                 <div className="below">
-                    <a href="#somthing"><img src={instagram} style={{width: '20px', height: '20px'}} /></a>
+                    <a href="#instagram"><img src={instagram} style={{width: '20px', height: '20px'}} /></a>
                 </div>
             </div>
         </footer>

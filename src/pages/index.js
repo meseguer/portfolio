@@ -12,9 +12,7 @@ import experienced from "../images/icons/experienced.svg";
 import seo from "../images/icons/seo.svg";
 import specialized from "../images/icons/specialized.svg";
 import targeted from "../images/icons/targeted.svg";
-
-import google from "../images/icons/targeted.svg";
-import crowdforge from "../images/icons/targeted.svg";
+import crowdforge from "../images/crowdforge.png";
 import favicon from './../images/logo.png';
 
 const IndexPage = () => (
@@ -34,9 +32,8 @@ const IndexPage = () => (
           </div>
       </div>
 
-        {/*style="border-radius: 50px"*/}
       <section className="showcase container mt-10">
-        <div className="card shadow" >
+        <div className="card shadow" style={{ borderRadius: '10%'}} >
             <div className="showcase-card card-body text-center">
                 <h2 className="subtitle text-center w-50 mx-auto">Build your vision</h2>
                 <div className="row showcase-row">
@@ -95,37 +92,16 @@ const IndexPage = () => (
 
         {/* Work experiences */}
 
-        <section className="work" style={{width: '90%', margin: '0 auto'}}>
+        <section className="work" style={{width: '90%', margin: '100px auto'}}>
             <h2 className="subtitle text-center">Our work</h2>
             <div className="row">
                 <div className="col-sm" style={{ marginTop: '25px' }}>
                     <div className="card work__card-body" style={{height: '100%'}}>
-                        <img className="card-img-top mx-auto" src="./img/google.jpg" style={{height: '178px'}} />
+                        <img className="card-img-top mx-auto" src={crowdforge} style={{height: '178px', width: 'auto '}} />
                             <div className="card-body">
                                 <h5 className="card-title">Search engine used by millions</h5>
                                 <p className="card-text">Built using the latest technologies in terms of Web development and Machine learning.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
-                            </div>
-                    </div>
-                </div>
-                <div className="col-sm" style={{marginTop: '25px'}}>
-                    <div className="card work__card-body" style={{height: '100%'}}>
-                        <img className="card-img-top mx-auto" src="./img/crowdforge.png" style={{maxWidth: '210px', height: '178px'}} />
-                            <div className="card-body">
-                                <h5 className="card-title">Team building platform</h5>
-                                <p className="card-text">Built using Vuejs, SASS and PHP...</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
-                            </div>
-                    </div>
-                </div>
-                <div className="col-sm" style={{marginTop: '25px'}}>
-                    <div className="card work__card-body" style={{height: '100%'}}>
-                        <img className="card-img-top mx-auto" src="./img/crowdforge.png" style={{maxWidth: '210px', height: '178px' }} />
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <a href="//crowdforge.io" className="btn btn-primary">Check it out</a>
                             </div>
                     </div>
                 </div>
