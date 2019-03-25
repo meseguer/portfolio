@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import instagram from "./../images/instagram.svg" // Tell Webpack this JS file uses this image
+import instagram from "./../images/instagram.svg"
 
 const Layout = ({ children }) => (
   <StaticQuery

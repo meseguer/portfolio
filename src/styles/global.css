@@ -1,8 +1,19 @@
+body {
+
+    background: #f7faff !important;
+    overflow-x: hidden;
+    color: #000000;
+    font-family: Lato;
+}
+
 .call-to-action {
     background-image: url('./../images/footer.svg');
     height: 780px;
 }
 
+.header-hero {
+
+}
 
 .devshop-button {
     width: 302.6px;
@@ -25,7 +36,6 @@
 }
 
 .showcase {
-    margin-top: 100px;
     max-width: 95%;
 }
 .showcase-card {
@@ -35,9 +45,6 @@
     margin-top: 40px;
 }
 @media (min-width: 768px) {
-    .showcase {
-        margin-top: 300px;
-    }
     .showcase-card {
         padding: 50px 100px
     }

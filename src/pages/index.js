@@ -4,7 +4,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import hero from "../images/hero-eclipse.svg";
+
+import hero from "../images/hero.svg";
 import design from "../images/icons/design.svg";
 import development from "../images/icons/development.svg";
 import experienced from "../images/icons/experienced.svg";
@@ -12,8 +13,13 @@ import seo from "../images/icons/seo.svg";
 import specialized from "../images/icons/specialized.svg";
 import targeted from "../images/icons/targeted.svg";
 
+import google from "../images/icons/targeted.svg";
+import crowdforge from "../images/icons/targeted.svg";
+import favicon from './../images/logo.png';
+
 const IndexPage = () => (
   <Layout>
+    <link rel="shortcut icon" type="image/png" href={favicon} />
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div>
       <div className={ 'row' }>
@@ -24,8 +30,7 @@ const IndexPage = () => (
               </Link>
           </div>
           <div className={ 'col-md-6'}>
-              <img src={hero} />
-              { /*style="position: absolute; top: -400px; right: -400px;" alt=""*/ }
+              <img src={hero} className={ 'header-hero'} />
           </div>
       </div>
 
@@ -83,6 +88,45 @@ const IndexPage = () => (
                                         up.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Work experiences */}
+
+        <section className="work" style={{width: '90%', margin: '0 auto'}}>
+            <h2 className="subtitle text-center">Our work</h2>
+            <div className="row">
+                <div className="col-sm" style={{ marginTop: '25px' }}>
+                    <div className="card work__card-body" style={{height: '100%'}}>
+                        <img className="card-img-top mx-auto" src="./img/google.jpg" style={{height: '178px'}} />
+                            <div className="card-body">
+                                <h5 className="card-title">Search engine used by millions</h5>
+                                <p className="card-text">Built using the latest technologies in terms of Web development and Machine learning.</p>
+                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                            </div>
+                    </div>
+                </div>
+                <div className="col-sm" style={{marginTop: '25px'}}>
+                    <div className="card work__card-body" style={{height: '100%'}}>
+                        <img className="card-img-top mx-auto" src="./img/crowdforge.png" style={{maxWidth: '210px', height: '178px'}} />
+                            <div className="card-body">
+                                <h5 className="card-title">Team building platform</h5>
+                                <p className="card-text">Built using Vuejs, SASS and PHP...</p>
+                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                            </div>
+                    </div>
+                </div>
+                <div className="col-sm" style={{marginTop: '25px'}}>
+                    <div className="card work__card-body" style={{height: '100%'}}>
+                        <img className="card-img-top mx-auto" src="./img/crowdforge.png" style={{maxWidth: '210px', height: '178px' }} />
+                            <div className="card-body">
+                                <h5 className="card-title">Card title</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                            </div>
                     </div>
                 </div>
             </div>
