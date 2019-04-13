@@ -1,10 +1,8 @@
-import fetch from 'node-fetch';
-
 const nodemailer = require('nodemailer');
 
-
-exports.handler = async function (event, context, callback) {
+exports.handler = async function (event) {
   try {
+    const { name, email, message } = JSON.parse(event.body);
     const transporter = nodemailer.createTransport({
       host: 'smtp.ethereal.email',
       port: 587,
@@ -18,7 +16,7 @@ exports.handler = async function (event, context, callback) {
       from: 'foo@example.com',
       to: 'jinamus@getnada.com',
       subject: 'Freelancing Request',
-      text: 'That was easy!',
+      html: `Name: ${name} <br> Email: ${email} <br> Message: ${message}`,
     };
 
     const response = await transporter.sendMail(mailOptions);
@@ -33,15 +31,3 @@ exports.handler = async function (event, context, callback) {
     };
   }
 };
-
-/*
-* (error, info) => {
-    if (error) {
-
-    }
-    return {
-      statusCode: 201,
-      body: 'Email sent',
-    };
-*
-* */
