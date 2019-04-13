@@ -6,7 +6,7 @@ import { Formik, Form, Field } from 'formik';
 
 export default class IndexPage extends React.Component {
   sendEmail(values, setSubmitting) {
-    axios.post('https://meseguer.io/.netlify/functions/hello', values)
+    axios.post('/.netlify/functions/hello', values)
       .then((res) => {
         setSubmitting(false);
       });
