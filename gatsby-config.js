@@ -31,6 +31,14 @@ module.exports = {
         icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/projects`,
+        name: "markdown-pages",
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
   developMiddleware: (app) => {
     app.use(
