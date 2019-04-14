@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import Image from '../components/image';
@@ -15,17 +15,16 @@ import targeted from '../images/icons/targeted.svg';
 import crowdforge from '../images/crowdforge.png';
 import favicon from '../images/logo.png';
 
-import PROJECT from '../templates/project';
-
-
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <link rel="shortcut icon" type="image/png" href={favicon} />
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
     <div>
       <div className="row">
         <div className="col-md-6">
-          <h1>We build modern solutions, for modern problems.</h1>
+          <h1>We build modern solutions, for modern problems.
+              {JSON.stringify(data)}
+          </h1>
           <Link to="/contact/">
             <button className="devshop-button">Get a quote</button>
           </Link>
@@ -119,12 +118,18 @@ A design adapted to your app with research to back it
         </div>
       </section>
 
-    {/*    */}
-
-    <PROJECT />
-
     </div>
   </Layout>
 );
+
+// test
+
+export const query = graphql`
+      query ProjectsQueryQuery {
+          dataJson {
+              value
+          }
+     }
+`;
 
 export default IndexPage;
