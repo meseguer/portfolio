@@ -15,25 +15,7 @@ import targeted from '../images/icons/targeted.svg';
 import crowdforge from '../images/crowdforge.png';
 import favicon from '../images/logo.png';
 
-const FeaturedProjects = ({ data }) => {
-  const { markdownRemark: page, footerData, navbarData } = data;
-  const {
-    frontmatter: {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
-    },
-  } = page;
-
-  return (
-    <Layout footerData={footerData} navbarData={navbarData}>
-      <Helmet>
-        <meta name="title" content={seoTitle} />
-        <meta name="description" content={seoDescription} />
-        <title>{browserTitle}</title>
-      </Helmet>
-      <AboutPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
-    </Layout>
-  );
-};
+import PROJECT from '../templates/project';
 
 
 const IndexPage = () => (
@@ -136,6 +118,11 @@ A design adapted to your app with research to back it
           </div>
         </div>
       </section>
+
+    {/*    */}
+
+    <PROJECT />
+
     </div>
   </Layout>
 );
