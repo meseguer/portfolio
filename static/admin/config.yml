@@ -16,6 +16,7 @@ collections:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
   - name: projects
+    extension: json
     label: Projects
     folder: /static/projects
     create: true

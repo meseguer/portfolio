@@ -125,9 +125,12 @@ A design adapted to your app with research to back it
 // test
 
 export const query = graphql`
+    # query will go here
       query ProjectsQueryQuery {
           dataJson {
-              value
+              test {
+                  value
+              }
           }
      }
 `;
